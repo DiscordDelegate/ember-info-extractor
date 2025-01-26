@@ -6,6 +6,11 @@ if (window.Ember && window.Ember.getOwner) {
       if (store) {
         // Log Ember data to the console
         console.log('Ember Data:', store.peekAll());
+              // Send Ember data to the popup
+      chrome.runtime.sendMessage({
+        type: 'emberData',
+        data: store.peekAll()
+      });
       }
     }
   }
