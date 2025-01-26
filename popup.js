@@ -2,5 +2,5 @@
 chrome.runtime.onMessage.addListener((message) => {
     if (message.type === 'emberData') {
       document.getElementById('ember-data').textContent = JSON.stringify(message.data, null, 2);
-    }
+    }    console.log('Received message:', message);
   });

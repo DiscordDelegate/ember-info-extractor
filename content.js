@@ -5,7 +5,8 @@ if (window.Ember && window.Ember.getOwner) {
       const store = owner.lookup('service:store');
       if (store) {
         // Log Ember data to the console
-        console.log('Ember Data:', store.peekAll());
+        console.log('Ember Data:', store.peekAl
+          console.log('Ember Data:', store.peekAll());l());
               // Send Ember data to the popup
       chrome.runtime.sendMessage({
         type: 'emberData',
