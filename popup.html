@@ -17,13 +17,6 @@
   <h3>Ember Data</h3>
   <pre id="ember-data"></pre>
 
-  <script>
-    // Listen for messages from the content script
-    chrome.runtime.onMessage.addListener((message) => {
-      if (message.type === 'emberData') {
-        document.getElementById('ember-data').textContent = JSON.stringify(message.data, null, 2);
-      }
-    });
-  </script>
+  <script src="popup.js"></script>
 </body>
 </html>
